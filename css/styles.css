@@ -49,13 +49,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-.container {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -67,6 +60,13 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 /* Page header */
 .page-header {
@@ -114,14 +114,22 @@ img {
   display: inline-block;
 }
 .icon-envelope {
-  width: 16px;
-  height: 12px;
+  /* width: 16px;
+  height: 12px; */
   margin-right: 10px;
+  fill: var(--secondary-text-color);
 }
 .icon-smartphone {
-  width: 10px;
-  height: 16px;
+  /* width: 10px;
+  height: 16px; */
   margin-right: 10px;
+  fill: var(--secondary-text-color);
+}
+.contacts:hover .icon-envelope,
+.contacts:focus .icon-envelope,
+.contacts:hover .icon-smartphone,
+.contacts:focus .icon-smartphone {
+  fill: var(--accent-color);
 }
 .main-nav .auth-item + .auth-item {
   margin-left: 50px;
@@ -164,6 +172,7 @@ img {
   justify-content: center;
   margin-bottom: 50px;
 }
+/* кнопка заказать услугу */
 .primary {
   padding: 10px 32px;
   border: 1px solid transparent;
@@ -178,6 +187,7 @@ img {
   background-color: var(--accent-color);
   cursor: pointer;
 }
+/* кнопки фильтров портфолио */
 .secondary-permanent,
 .secondary {
   display: inline-block;
@@ -214,6 +224,7 @@ img {
   text-align: center;
   background-color: var(--accent-bgc);
 }
+/* фоновая картинка */
 .overlay {
   max-width: 1600px;
   height: 600px;
@@ -348,43 +359,80 @@ img {
   padding-bottom: 10px;
   color: var(--secondary-text-color);
 }
-/* ей проблема */
-.team-socials {
+/* список */
+.social-list {
   display: flex;
   justify-content: space-between;
   padding: 0 32px 30px 32px;
-  /* color: var(--title-text-color); */
 }
-.team-links {
-  height: 44px;
+/* ,елемент списка */
+.social-item {
+  display: block;
   width: 44px;
+  height: 44px;
+  border-radius: 50%;
 }
+/* ссилка */
+.team-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+}
+/* свг иконка */
 .social-icon {
   fill: #afb1b8;
-  width: 44px;
-  height: 44px;
+  width: 20px;
+  height: 20px;
 }
+/* свг иконка при ховере ссилки */
 .team-links:hover .social-icon,
 .team-links:focus .social-icon {
   fill: var(--title-text-color);
-}
-.team-links:hover,
-.team-links:focus {
   background-color: var(--accent-color);
 }
-
-/* ей проблема */
-
+.social-item:hover,
+.social-item:focus {
+  background-color: var(--accent-color);
+}
+/* Our clients (latest section) */
+.client-list {
+  display: flex;
+  justify-content: space-between;
+}
+.client-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+}
+.client-link {
+  display: block;
+}
+.client-icon {
+  width: 106px;
+  height: 60px;
+  fill: #afb1b8;
+}
+.client-item:hover .client-icon,
+.client-item:focus .client-icon {
+  fill: var(--accent-color);
+}
+.client-item:hover,
+.client-item:focus {
+  border-color: var(--accent-color);
+}
 /*Portfolio Work examples */
 .projects {
   display: flex;
   flex-wrap: wrap;
 }
 .projects li {
-  /* flex-basis: calc(100% / 3 - 30px); */
   margin-right: 30px;
   margin-bottom: 30px;
-  /* width: calc((100% - 60px) / 3); */
 }
 .projects li:nth-child(3n) {
   margin-right: 0;
@@ -396,10 +444,6 @@ img {
   border-left: #eee 1px solid;
   border-bottom: #eee 1px solid;
   border-right: #eee 1px solid;
-}
-.project-title h2,
-p {
-  margin: 0;
 }
 .project-name {
   margin-top: 0;
@@ -453,4 +497,54 @@ p {
 .footer-contacts:hover,
 .footer-contacts:focus {
   color: var(--accent-color);
+}
+.join-us {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.fs-list {
+  display: flex;
+  justify-content: space-between;
+}
+.fs-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.fs-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+}
+.fs-icon {
+  fill: var(--title-text-color);
+  width: 20px;
+  height: 20px;
+}
+.fs-item:hover,
+.fs-item:focus {
+  width: 44px;
+  height: 44px;
+  background-color: var(--accent-color);
+}
+.footer-groups {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.footer-group {
+  margin-right: 79px;
+}
+.footer-socials {
+  width: 206px;
 }
