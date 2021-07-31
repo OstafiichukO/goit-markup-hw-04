@@ -114,14 +114,10 @@ img {
   display: inline-block;
 }
 .icon-envelope {
-  /* width: 16px;
-  height: 12px; */
   margin-right: 10px;
   fill: var(--secondary-text-color);
 }
 .icon-smartphone {
-  /* width: 10px;
-  height: 16px; */
   margin-right: 10px;
   fill: var(--secondary-text-color);
 }
@@ -186,6 +182,7 @@ img {
   color: var(--title-text-color);
   background-color: var(--accent-color);
   cursor: pointer;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 /* кнопки фильтров портфолио */
 .secondary-permanent,
@@ -202,6 +199,8 @@ img {
   cursor: pointer;
 }
 .secondary-permanent {
+  box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
+    0 2px 2px 0 rgba(0, 0, 0, 0.12);
   background-color: var(--accent-color);
   color: var(--title-text-color);
 }
@@ -214,6 +213,14 @@ img {
   background-color: var(--accent-color);
   color: var(--title-text-color);
 }
+.secondary:hover,
+.secondary:focus,
+.secondary-permanent:hover,
+.secondary-permanent:focus {
+  box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
+    0 2px 2px 0 rgba(0, 0, 0, 0.12);
+}
+
 /*WebStudio Hero */
 .hero.section {
   padding-top: 200px;
@@ -329,7 +336,8 @@ img {
   border-left: 1px solid #eee;
   border-right: 1px solid #eee;
   border-radius: 0 0 4px 4px;
-  box-shadow: 1px 2px #eee, -1px 2px #eee;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
 }
 .list-item:not(:last-child) {
@@ -383,8 +391,6 @@ img {
 /* свг иконка */
 .social-icon {
   fill: #afb1b8;
-  width: 20px;
-  height: 20px;
 }
 /* свг иконка при ховере ссилки */
 .team-links:hover .social-icon,
@@ -413,8 +419,6 @@ img {
   display: block;
 }
 .client-icon {
-  width: 106px;
-  height: 60px;
   fill: #afb1b8;
 }
 .client-item:hover .client-icon,
@@ -430,14 +434,19 @@ img {
   display: flex;
   flex-wrap: wrap;
 }
-.projects li {
+.project-item:hover,
+.project-item:focus {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.06),
+    1px 4px 6px 0 rgba(0, 0, 0, 0.16);
+}
+.project-item {
   margin-right: 30px;
   margin-bottom: 30px;
 }
-.projects li:nth-child(3n) {
+.project-item:nth-child(3n) {
   margin-right: 0;
 }
-.projects li:nth-child(n + 7) {
+.project-item:nth-child(n + 7) {
   margin-bottom: 0;
 }
 .projects .img-description {
@@ -528,13 +537,9 @@ img {
 }
 .fs-icon {
   fill: var(--title-text-color);
-  width: 20px;
-  height: 20px;
 }
 .fs-item:hover,
 .fs-item:focus {
-  width: 44px;
-  height: 44px;
   background-color: var(--accent-color);
 }
 .footer-groups {
