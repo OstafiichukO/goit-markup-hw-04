@@ -100,8 +100,8 @@ img {
 }
 .main-nav a {
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .nav-item + .nav-item {
   margin-left: 40px;
@@ -271,7 +271,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 25px 0;
+  width: 270px;
+  height: 170px;
   margin-bottom: 30px;
   background-color: #f5f4fa;
 }
@@ -344,7 +345,7 @@ img {
   margin-right: 30px;
 }
 .img-description {
-  padding: 20px 24px;
+  padding: 30px 32px;
 }
 .name {
   font-weight: 500;
@@ -353,9 +354,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   margin-top: 0;
-  margin-bottom: 0;
-  /* padding-top: 10px; */
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 .position {
   font-weight: 400;
@@ -364,21 +363,21 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 0;
-  padding-bottom: 10px;
+  margin-bottom: 16px;
   color: var(--secondary-text-color);
 }
 /* список */
 .social-list {
   display: flex;
   justify-content: space-between;
-  padding: 0 32px 30px 32px;
 }
-/* ,елемент списка */
+/* елемент списка */
 .social-item {
   display: block;
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  background-color: #ffffff;
 }
 /* ссилка */
 .team-links {
@@ -398,10 +397,14 @@ img {
   fill: var(--title-text-color);
   background-color: var(--accent-color);
 }
+/* .social-icon:hover .social-item,
+.social-icon:focus .social-item {
+  background-color: var(--accent-color);
+/* } */
 .social-item:hover,
 .social-item:focus {
   background-color: var(--accent-color);
-}
+} */
 /* Our clients (latest section) */
 .client-list {
   display: flex;
