@@ -43,6 +43,8 @@ ul {
 .link {
   color: var(--primary-text-color);
   text-decoration: none;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 img {
   display: block;
@@ -82,7 +84,7 @@ img {
 }
 .logo {
   padding-top: 24px;
-  padding-bottom: 25px;
+  padding-bottom: 24px;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -100,8 +102,6 @@ img {
 }
 .main-nav a {
   display: flex;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 .nav-item + .nav-item {
   margin-left: 40px;
@@ -150,6 +150,8 @@ img {
   justify-content: center;
   color: var(--secondary-text-color);
   text-decoration: none;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .contacts:hover,
 .contacts:focus {
@@ -369,14 +371,13 @@ img {
 /* список */
 .social-list {
   display: flex;
-  justify-content: space-between;
-  margin: 0 12px 10px 12px;
 }
 /* ,елемент списка */
 .social-item {
   display: block;
   width: 44px;
   height: 44px;
+  margin-bottom: 10px;
   border-radius: 50%;
 }
 /* ссилка */
@@ -387,6 +388,15 @@ img {
   width: inherit;
   height: inherit;
   border-radius: 50%;
+}
+.social-item:not(:last-child) {
+  margin-right: 10px;
+}
+.social-item:nth-child(1) {
+  margin-left: 8px;
+}
+.social-item:nth-child(4) {
+  margin-right: 8px;
 }
 /* свг иконка */
 .social-icon {
@@ -424,6 +434,7 @@ img {
   width: inherit;
   height: inherit;
   border: 1px solid #afb1b8;
+  border-radius: 4px;
 }
 .client-icon {
   fill: #afb1b8;
@@ -440,6 +451,7 @@ img {
 }
 .project-link {
   display: block;
+  text-decoration: none;
 }
 .project-link:hover,
 .project-link:focus {
@@ -484,7 +496,10 @@ img {
   background-color: var(--accent-bgc);
   color: var(--title-text-color);
 }
-.footer-section {
+/* .footer-section {
+  padding: 60px 0;
+} */
+.footer .container {
   padding: 60px 0;
 }
 .footer-logo {
